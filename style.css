@@ -1,0 +1,43 @@
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+button, input {
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#pecker {
+  background: purple;
+  color: white;
+}
+
+form input {
+  width: 80%;
+  background: #333;
+  color: white;
+}
+
+form button {
+  background: green;
+  color: white;
+}
+
+.payments a {
+  color: gold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
