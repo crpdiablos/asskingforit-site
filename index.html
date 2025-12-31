@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <h2>Kinks</h2>
+<ul id="kinks-list">
+  <li>Loading kinks...</li>
+</ul>
   <div class="container">
     <h1>👑 Welcome to AssKingForIt 👑</h1>
     <p>The King is watching... are you assking for it?</p>
@@ -25,5 +29,22 @@
       <a href="https://buy.stripe.com/test_8wMcPI0zE7qFdfqeUU" target="_blank">💳 Stripe Tip</a>
     </div>
   </div>
+  <script>
+  fetch("/api/kinks")
+    .then(res => res.json())
+    .then(data => {
+      const list = document.getElementById("kinks-list");
+      list.innerHTML = "";
+
+      data.kinks.forEach(kink => {
+        const li = document.createElement("li");
+        li.textContent = kink;
+        list.appendChild(li);
+      });
+    })
+    .catch(err => {
+      console.error("Failed to load kinks", err);
+    });
+</script>
 </body>
 </html>
